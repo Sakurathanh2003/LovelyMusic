@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Aeonik-Medium.otf">
+            <string>Aeonik-Medium</string>
+        </array>
+        <array key="Aeonik-Regular.otf">
+            <string>Aeonik-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="NetworkErrorEmbededView" customModule="Wallpaper" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="350" height="158"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_no_internet" translatesAutoresizingMaskIntoConstraints="NO" id="Lpw-e8-eAr">
+                    <rect key="frame" x="142.5" y="0.0" width="65" height="55"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="55" id="GH6-AK-RGP"/>
+                        <constraint firstAttribute="width" constant="65" id="RYZ-1H-nvR"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ij4-U2-p1Q">
+                    <rect key="frame" x="16" y="65" width="318" height="34"/>
+                    <string key="text">Please make sure you are connected
+to an active network and try again</string>
+                    <fontDescription key="fontDescription" name="Aeonik-Regular" family="Aeonik" pointSize="14"/>
+                    <color key="textColor" red="0.55294117647058827" green="0.55294117647058827" blue="0.55294117647058827" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KOf-uk-qL7" customClass="TapableView" customModule="Wallpaper" customModuleProvider="target">
+                    <rect key="frame" x="127.5" y="123" width="95" height="35"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_retry" translatesAutoresizingMaskIntoConstraints="NO" id="RMu-wt-hdA">
+                            <rect key="frame" x="13" y="5.5" width="24" height="24"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="24" id="1Mn-UH-657"/>
+                                <constraint firstAttribute="width" constant="24" id="oba-uP-PZY"/>
+                            </constraints>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Retry" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rub-xj-mNZ">
+                            <rect key="frame" x="42" y="7.5" width="39" height="20"/>
+                            <fontDescription key="fontDescription" name="Aeonik-Medium" family="Aeonik" pointSize="16"/>
+                            <color key="textColor" red="0.94901960784313721" green="0.94901960784313721" blue="0.94901960784313721" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="RMu-wt-hdA" firstAttribute="centerY" secondItem="KOf-uk-qL7" secondAttribute="centerY" id="0W1-ud-AUf"/>
+                        <constraint firstItem="RMu-wt-hdA" firstAttribute="leading" secondItem="KOf-uk-qL7" secondAttribute="leading" constant="13" id="0Wd-7Q-vLq"/>
+                        <constraint firstItem="rub-xj-mNZ" firstAttribute="centerY" secondItem="KOf-uk-qL7" secondAttribute="centerY" id="COl-ar-emU"/>
+                        <constraint firstItem="rub-xj-mNZ" firstAttribute="leading" secondItem="RMu-wt-hdA" secondAttribute="trailing" constant="5" id="QX8-7p-Ajm"/>
+                        <constraint firstAttribute="width" constant="95" id="She-Dh-PqT"/>
+                        <constraint firstAttribute="height" constant="35" id="euv-E8-Eb9"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="8"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                            <real key="value" value="1"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                            <color key="value" red="0.94509803921568625" green="0.94509803921568625" blue="0.94509803921568625" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="retryButtonDidTap:" destination="iN0-l3-epB" eventType="touchUpInside" id="3Uq-Xd-7B8"/>
+                    </connections>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="KOf-uk-qL7" firstAttribute="top" secondItem="ij4-U2-p1Q" secondAttribute="bottom" priority="250" constant="25" id="0Q4-5E-rSi"/>
+                <constraint firstItem="ij4-U2-p1Q" firstAttribute="top" secondItem="Lpw-e8-eAr" secondAttribute="bottom" constant="10" id="KQA-7D-Kj2"/>
+                <constraint firstItem="Lpw-e8-eAr" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="LU2-yk-8Jc"/>
+                <constraint firstAttribute="trailing" secondItem="ij4-U2-p1Q" secondAttribute="trailing" constant="16" id="WQ9-4B-wwf"/>
+                <constraint firstItem="KOf-uk-qL7" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="gma-qk-Ff8"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="KOf-uk-qL7" secondAttribute="bottom" id="kZU-ZQ-sRc"/>
+                <constraint firstItem="Lpw-e8-eAr" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="pgV-Js-JFX"/>
+                <constraint firstItem="ij4-U2-p1Q" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="uLa-gP-aIM"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="91.304347826086968" y="377.67857142857139"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="ic_no_internet" width="65" height="55"/>
+        <image name="ic_retry" width="24" height="24"/>
+    </resources>
+</document>
