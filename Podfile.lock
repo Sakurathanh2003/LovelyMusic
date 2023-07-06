@@ -1,3 +1,86 @@
-PODFILE CHECKSUM: 82f661b8bbcc8a85381c0e278d08757bb276c1d2
+PODS:
+  - Alamofire (5.6.4)
+  - Cache (6.0.0)
+  - IQKeyboardManager (6.5.11)
+  - lottie-ios (4.2.0)
+  - ReachabilitySwift (5.0.0)
+  - Realm (10.23.0):
+    - Realm/Headers (= 10.23.0)
+  - Realm/Headers (10.23.0)
+  - RealmSwift (10.23.0):
+    - Realm (= 10.23.0)
+  - Resolver (1.5.0)
+  - RxCocoa (6.5.0):
+    - RxRelay (= 6.5.0)
+    - RxSwift (= 6.5.0)
+  - RxRelay (6.5.0):
+    - RxSwift (= 6.5.0)
+  - RxSwift (6.5.0)
+  - SDAVAssetExportSession (0.0.4)
+  - SDWebImage (5.15.6):
+    - SDWebImage/Core (= 5.15.6)
+  - SDWebImage/Core (5.15.6)
+  - SVProgressHUD (2.2.5)
+  - SwiftyAttributes (5.3.0)
+
+DEPENDENCIES:
+  - Alamofire
+  - Cache
+  - IQKeyboardManager
+  - lottie-ios
+  - ReachabilitySwift
+  - RealmSwift (= 10.23.0)
+  - Resolver
+  - RxCocoa
+  - RxSwift
+  - SDAVAssetExportSession (from `https://github.com/rs/SDAVAssetExportSession.git`)
+  - SDWebImage
+  - SVProgressHUD
+  - SwiftyAttributes
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - Cache
+    - IQKeyboardManager
+    - lottie-ios
+    - ReachabilitySwift
+    - Realm
+    - RealmSwift
+    - Resolver
+    - RxCocoa
+    - RxRelay
+    - RxSwift
+    - SDWebImage
+    - SVProgressHUD
+    - SwiftyAttributes
+
+EXTERNAL SOURCES:
+  SDAVAssetExportSession:
+    :git: https://github.com/rs/SDAVAssetExportSession.git
+
+CHECKOUT OPTIONS:
+  SDAVAssetExportSession:
+    :commit: af4728e5fb83b618a6a548fe78b1bdf6b612fba1
+    :git: https://github.com/rs/SDAVAssetExportSession.git
+
+SPEC CHECKSUMS:
+  Alamofire: 4e95d97098eacb88856099c4fc79b526a299e48c
+  Cache: 4ca7e00363fca5455f26534e5607634c820ffc2d
+  IQKeyboardManager: ef43ce1ba1e5aaf4adf222c0a46f39761f246879
+  lottie-ios: 809ecf2d460ed650a6aed7aa88b2ec45fab4779c
+  ReachabilitySwift: 985039c6f7b23a1da463388634119492ff86c825
+  Realm: bdac9baede54becb2883f319fc50e9e12b35235c
+  RealmSwift: e083456e083dcfd6ef9087cdde6b031ec6224783
+  Resolver: 68984624572763018fd8ec7b8e3e8df0e3b6bba5
+  RxCocoa: 94f817b71c07517321eb4f9ad299112ca8af743b
+  RxRelay: 1de1523e604c72b6c68feadedd1af3b1b4d0ecbd
+  RxSwift: 5710a9e6b17f3c3d6e40d6e559b9fa1e813b2ef8
+  SDAVAssetExportSession: 0926b6bf12cc4e9179540957cf5c4233b78f4af0
+  SDWebImage: d47d81bea8a77187896b620dc79c3c528e8906b9
+  SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
+  SwiftyAttributes: 6d7386e90ac611b6acac8b59e38f34bfa4621c80
+
+PODFILE CHECKSUM: e87f18672e1898c6d7ca25339fa805fb46161d6c
 
 COCOAPODS: 1.11.3
