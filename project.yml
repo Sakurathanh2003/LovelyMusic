@@ -4,12 +4,16 @@ options:
   postGenCommand: pod install
 targets:
   LovelyMusic:
-    deploymentTarget: '14.0'
+    type: application
     platform: iOS
+    deploymentTarget: "14.0"
+    sources:
+      - path: FunnyRingtones
     settings:
       base:
         CODE_SIGN_IDENTITY: iPhone Developer
-        CODE_SIGN_STYLE: Manual
+        CODE_SIGN_STYLE: Automatic
+        DEVELOPMENT_TEAM: ZU88ND8437
         INFOPLIST_FILE: LovelyMusic/App/Info.plist
         DEBUG_INFORMATION_FORMAT: dwarf-with-dsym
         ENABLE_BITCODE: 'NO'

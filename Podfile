@@ -56,5 +56,6 @@ binary_pod 'RxSwift'
   binary_pod 'Resolver'
   binary_pod 'lottie-ios'
   pod 'SDAVAssetExportSession', :git => 'https://github.com/rs/SDAVAssetExportSession.git'
+binary_pod 'Firebase/Crashlytics'
 
 end
