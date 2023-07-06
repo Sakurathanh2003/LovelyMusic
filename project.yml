@@ -10,10 +10,10 @@ targets:
       base:
         CODE_SIGN_IDENTITY: iPhone Developer
         CODE_SIGN_STYLE: Manual
+        INFOPLIST_FILE: LovelyMusic/App/Info.plist
         DEBUG_INFORMATION_FORMAT: dwarf-with-dsym
         ENABLE_BITCODE: 'NO'
         PRODUCT_BUNDLE_IDENTIFIER: com.meimei.LovelyMusic
-        DEVELOPMENT_TEAM: 4ND3FKVSPM
         SWIFT_VERSION: 5.0
         TARGETED_DEVICE_FAMILY: 1
     sources:
