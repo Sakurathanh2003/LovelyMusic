@@ -44,6 +44,7 @@ struct Home: View {
             }
         }
         .environmentObject(viewModel)
+        .navigationBarHidden(true)
     }
 }
 

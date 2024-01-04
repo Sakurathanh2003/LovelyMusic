@@ -13,7 +13,10 @@ struct ListPlaylist: View {
             HStack {
                 Spacer().frame(width: 24)
                 ForEach(0..<10) { _ in
-                    Playlist()
+                    NavigationLink(destination: PlaylistScreen().navigationBarHidden(true)) {
+                        Playlist()
+                    }
+                    
                     Spacer().frame(width: 24)
                 }
             }
