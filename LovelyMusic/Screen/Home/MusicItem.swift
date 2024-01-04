@@ -19,7 +19,7 @@ struct MusicItem: View {
                 HStack {
                     Text("Bye Bye")
                         .font(OpenSans.semibold(size: 18))
-                        .foregroundColor(Color(rgb: 0xA5A5A5))
+                        .foregroundColor(.white)
                         .frame(height: 24)
                     Spacer()
                 }

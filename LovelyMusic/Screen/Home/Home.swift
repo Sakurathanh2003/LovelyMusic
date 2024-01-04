@@ -13,6 +13,8 @@ private struct Const {
 }
 
 struct Home: View {
+    @StateObject private var viewModel = HomeViewModel()
+    
     var body: some View {
         NavigationView {
             ZStack {
@@ -41,6 +43,7 @@ struct Home: View {
                 }
             }
         }
+        .environmentObject(viewModel)
     }
 }
 
