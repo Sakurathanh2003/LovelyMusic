@@ -86,7 +86,9 @@ struct PlaylistScreen: View {
                         Spacer().frame(height: Const.padding)
                         HStack {
                             Spacer().frame(width: Const.padding)
-                            MusicItem()
+                            NavigationLink(destination: PlayMusicScreen().navigationBarHidden(true)) {
+                                MusicItem()
+                            }
                             Spacer().frame(width: Const.padding)
                         }
                     }

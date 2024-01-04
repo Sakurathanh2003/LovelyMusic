@@ -20,7 +20,10 @@ struct ListFavoriteMusic: View {
             
             ForEach(0..<10) {_ in
                 Spacer().frame(height: 24)
-                MusicItem()
+                
+                NavigationLink(destination: PlayMusicScreen().navigationBarHidden(true)) {
+                    MusicItem()
+                }
             }
             
             
