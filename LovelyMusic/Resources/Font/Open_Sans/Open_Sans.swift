@@ -1,18 +1,22 @@
 //
-//  Metropolis.swift
+//  Open_Sans.swift
 //  LovelyMusic
 //
-//  Created by Mei Mei on 06/07/2023.
+//  Created by MeiMei on 04/01/2024.
 //
 
 import UIKit
 import SwiftUI
 
-public final class Metropolis {
-    private static let name = "Metropolis"
+public final class OpenSans {
+    private static let name = "OpenSans"
 
     public static func bold(size: CGFloat) -> Font {
         return Font.custom("\(name)-Bold", size: size)
+    }
+    
+    public static func regular(size: CGFloat) -> Font {
+        return Font.custom("\(name)-Regular", size: size)
     }
 
     public static func medium(size: CGFloat) -> Font {
@@ -27,4 +31,3 @@ public final class Metropolis {
         return Font.custom("\(name)-ExtraBold", size: size)
     }
 }
-

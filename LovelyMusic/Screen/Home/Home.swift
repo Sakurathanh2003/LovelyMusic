@@ -7,115 +7,67 @@
 
 import SwiftUI
 
+private struct Const {
+    static let backgroundColors = [Color(rgb: 0x0F0817), Color(rgb: 0x781ECF)]
+    static let padding: CGFloat = 24
+}
+
 struct Home: View {
     var body: some View {
         NavigationView {
-            VStack {
-                HStack {
-                    Spacer().frame(width: 20)
-
-                    Image("ic_avatar").resizable()
-                        .frame(width: 49, height: 49)
-
-                    Spacer()
-
-                    Button {
-                        print("helo")
-                    } label: {
-                        Image("ic_search").resizable()
-                            .frame(width: 43, height: 43)
+            ZStack {
+                LinearGradient(colors: Const.backgroundColors, startPoint: .top, endPoint: .bottom)
+                    .edgesIgnoringSafeArea(.all)
+                
+                ScrollView(.vertical, showsIndicators: false) {
+                    Spacer().frame(height: Const.padding)
+                    HomeTitle()
+                    Spacer().frame(height: 24)
+                    HStack {
+                        Spacer().frame(width: Const.padding)
+                        HomeSearchBar()
+                        Spacer().frame(width: Const.padding)
                     }
-
-                    Spacer().frame(width: 20)
+                    Spacer().frame(height: 40)
+                    CategoryMusic()
+                    Spacer().frame(height: 28)
+                    ListPlaylist()
+                    Spacer().frame(height: 40)
+                    HStack {
+                        Spacer().frame(width: Const.padding)
+                        ListFavoriteMusic()
+                        Spacer().frame(width: Const.padding)
+                    }
                 }
-
-                ScrollView(.vertical) {
-                    HomeContent()
-                }
-            }.frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
+            }
         }
-        .navigationBarHidden(true)
-        .ignoresSafeArea()
     }
 }
 
-struct HomeContent: View {
+struct HomeTitle: View {
     var body: some View {
-        VStack {
-            Spacer().frame(height: 29)
-
+        VStack(spacing: 8) {
             HStack {
-                Spacer().frame(width: 20)
-
-                VStack {
-                    Text("Find the best")
-                        .font(Metropolis.extraBold(size: 28))
-                    Spacer()
-                    Text("music for you")
-                        .font(Metropolis.extraBold(size: 28))
-                }.frame(height: 74)
-
+                Spacer().frame(width: Const.padding)
+                Text("Welcome back!")
+                    .font(OpenSans.bold(size: 24))
+                    .foregroundColor(.white)
+                    .frame(height: 32)
                 Spacer()
             }
-
-            Spacer().frame(height: 24)
-
-            ListRecentMusic()
-
-            Spacer().frame(height: 40)
-
+            
             HStack {
-                Spacer().frame(width: 20)
-                Text("Discover").font(Metropolis.extraBold(size: 23))
-                Spacer()
-            }
-
-            Spacer().frame(height: 19)
-
-            ListMusic()
-
-            Spacer().frame(height: 33)
-
-            HStack {
-                Spacer().frame(width: 20)
-                Text("New Release").font(Metropolis.extraBold(size: 23))
+                Spacer().frame(width: Const.padding)
+                Text("What do you feel like today?")
+                    .font(OpenSans.semibold(size: 14))
+                    .foregroundColor(Color(rgb: 0xA5A5A5))
+                    .frame(height: 16)
                 Spacer()
             }
         }
     }
 }
 
-private struct ListRecentMusic: View {
-    var body: some View {
-        ScrollView(.horizontal, showsIndicators: false) {
-            HStack(spacing: 13) {
-                Spacer().frame(height: 20)
-                RecentMusic()
-                RecentMusic()
-                RecentMusic()
-                RecentMusic()
-                RecentMusic()
-                RecentMusic()
-            }
-        }
-    }
-}
-
-private struct ListMusic: View {
-    var body: some View {
-        ScrollView(.horizontal, showsIndicators: false) {
-            HStack(spacing: 14) {
-                Spacer().frame(height: 20)
-                MusicView()
-                MusicView()
-                MusicView()
-                MusicView()
-                MusicView()
-                MusicView()
-            }.frame(height: 145)
-        }
-    }
-}
 struct Home_Previews: PreviewProvider {
     static var previews: some View {
         Home()
